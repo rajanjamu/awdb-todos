@@ -2,7 +2,7 @@ const Todo = require('../models/todos')
 
 exports.getTodos = (req, res) => {
     Todo.find().then(foundTodos => {
-        res.status(400).json(foundTodos)
+        res.json(foundTodos)
     }).catch(err => {
         res.send(err)
     })
